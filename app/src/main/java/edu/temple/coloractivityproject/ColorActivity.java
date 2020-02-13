@@ -1,3 +1,6 @@
+//Shakeel Alibhai
+//CIS 3515 - Lab 3
+//Please do not copy!!!
 package edu.temple.coloractivityproject;
 
 import androidx.appcompat.app.AppCompatActivity;
