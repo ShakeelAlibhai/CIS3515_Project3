@@ -41,6 +41,7 @@ public class ColorActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 c.setBackgroundColor(Color.parseColor(parent.getItemAtPosition(position).toString()));
+                view.setBackgroundColor(Color.WHITE);
             }
 
             @Override
