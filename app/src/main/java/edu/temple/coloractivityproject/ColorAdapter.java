@@ -1,6 +1,7 @@
 package edu.temple.coloractivityproject;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -35,6 +36,7 @@ public class ColorAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         TextView t = new TextView(c);
         t.setText(getItem(position).toString());
+        t.setBackgroundColor(Color.parseColor(getItem(position).toString()));
         return t;
     }
 }
