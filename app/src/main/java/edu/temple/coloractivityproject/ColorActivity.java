@@ -1,6 +1,7 @@
 package edu.temple.coloractivityproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ public class ColorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color);
+
+        final ConstraintLayout c = findViewById(R.id.layout);
 
         Spinner s;
         s = findViewById(R.id.spinner);
@@ -37,7 +40,7 @@ public class ColorActivity extends AppCompatActivity {
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                parent.setBackgroundColor(Color.WHITE);
+                c.setBackgroundColor(Color.parseColor(parent.getItemAtPosition(position).toString()));
             }
 
             @Override
